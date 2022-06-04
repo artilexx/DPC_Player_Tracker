@@ -13,7 +13,7 @@ def InitializeTables():
     PASSWORD = os.environ.get("PASSWORD")
     HOST = os.environ.get("HOST")
 
-    conn = psycopg2.connect(database=DATABASE, user=USER, password=PASSWORD, host="HOST", port="5432")
+    conn = psycopg2.connect(database=DATABASE, user=USER, password=PASSWORD, host=HOST, port="5432")
     print("Database connected successfully")
     cur = conn.cursor()
     roles = ["pos1", "pos2", "pos3", "pos4", "pos5"]

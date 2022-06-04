@@ -3,6 +3,7 @@ from psycopg2 import sql
 import requests
 import json
 import os
+import time
 
 from proIDs_postgres import pos1, pos2, pos3, pos4, pos5
 
@@ -73,12 +74,17 @@ def createavgs(conn, cur, account_id, role):
                 print("Data succesfully inserted for match "  + str(match_id))
             except:
                 print("Data failed to insert for match " + str(match_id))
+            time.sleep(0.5)
 
         
 InitializeTables()
 
-conn = psycopg2.connect(database="d71oks8144g5gl", user="yarctttrmsbwrw", password="8ea649ad98eda35589c20e877787132edd310ffbd297bcaa2ac1efcaa17f619e",
-host="ec2-54-147-33-38.compute-1.amazonaws.com", port="5432")
+DATABASE = os.environ.get("DATABASE")
+USER = os.environ.get("USER")
+PASSWORD = os.environ.get("PASSWORD")
+HOST = os.environ.get("HOST")
+
+conn = psycopg2.connect(database=DATABASE, user=USER, password=PASSWORD, host=HOST, port="5432")
 print("Database connected successfully")
 cur = conn.cursor()
 

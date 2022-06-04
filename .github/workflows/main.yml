@@ -32,7 +32,7 @@ jobs:
         env: 
           DATABASE: ${{ secrets.DATABASE }}
           HOST: ${{ secrets.HOST }}
-          PASSWORD: ${{ secrets.POSTGRES_PASS }}
+          PASSWORD: ${{ secrets.PASSWORD }}
           USER: ${{ secrets.USER }}
         run: python postgres/create_avgs_postgres.py
 

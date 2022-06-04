@@ -34,5 +34,5 @@ jobs:
           HOST: ${{ secrets.HOST }}
           PASSWORD: ${{ secrets.POSTGRES_PASS }}
           USER: ${{ secrets.USER }}
-        run: python create_avgs_postgres.py
+        run: python avgs/create_avgs_postgres.py
 

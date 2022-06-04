@@ -4,7 +4,7 @@ import requests
 import json
 import os
 
-from proIDs import pos1, pos2, pos3, pos4, pos5
+from ..proIDs import pos1, pos2, pos3, pos4, pos5
 
 
 def InitializeTables():

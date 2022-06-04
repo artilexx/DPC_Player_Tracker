@@ -2,7 +2,7 @@ from flask import Flask, render_template, send_from_directory
 import requests
 import os
 import json
-from ..proIDs import pos1, pos2, pos3, pos4, pos5, idlist
+from proIDs_postgres import pos1, pos2, pos3, pos4, pos5, idlist
 import psycopg2
 from psycopg2 import sql
 import re

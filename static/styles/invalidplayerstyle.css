@@ -1,0 +1,39 @@
+body {  
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-right: 30px;
+    margin-left: 30px;
+    background-color: rgb(60, 79, 160);
+}
+
+h1 {
+    color: rgb(255, 255, 255);
+    text-align: left;
+    font-family: "Fredoka";
+    font-weight: 900;
+    font-size: 45px
+}
+
+a {
+    color: rgb(255, 255, 255);
+    text-align: left;
+    font-family: "Fredoka";
+    font-weight: 800;
+    font-size: 40px;
+    text-decoration: underline;
+}
+
+.centered {
+    position: fixed;
+    top: 40%;
+    left: 50%;
+    /* bring your own prefixes */
+    transform: translate(-50%, -50%);
+  }
+.under {
+    position: fixed;
+    top: 60%;
+    left: 50%;
+    /* bring your own prefixes */
+    transform: translate(-50%, -50%);
+}

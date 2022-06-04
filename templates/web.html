@@ -1,0 +1,89 @@
+<!doctype html>
+<title>DPC Player Tracker</title>
+<link href="https://fonts.googleapis.com/css?family=Fredoka|Raleway" rel="stylesheet">
+<link rel="stylesheetflask" href= "{{ url_for('static',filename = 'styles/style.css')}}">
+<link rel="stylesheetflask" href= "{{ url_for('static',filename = 'styles/dropdown.css')}}">
+<link rel="stylesheetflask" href= "{{ url_for('static',filename = 'styles/animation.css')}}">
+<link rel="stylesheet" href= "../static/styles/style.css">
+<link rel="stylesheet" href= "../static/styles/animation.css">
+<link rel="stylesheet" href= "../static/styles/dropdown.css">
+<script src="{{url_for('static', filename = 'functions.js')}}"></script>
+<html>
+   <head>
+      <h1 class = "header">
+         <div class = "scroller">
+            <span>Show DPC stats for:</span>
+               <span class = "animationtext">
+                  {{playername}}</br>
+                  Ame</br>
+                  Jerax</br>
+                  Somnus</br>
+                  BZM</br>
+                  MoonMeander</br>
+                  Yopaj</br>
+                  Yatoro</br>
+                  Quinn</br>
+                  Fata
+               </span>
+         </div>
+      </h1>
+   </head>
+   <div class = "rect"></div>
+   <div class = "playergrade">Grade: {{playergrade}}</div>
+   <div class = "winrate" style = "color : {{winratecolor}}">Winrate: {{winratefront}}%</div>
+   <!-- player select dropdown -->
+   <div class="dropdown", float = "left">
+      <button class="dropbutton">Player Selector: {{playername}}</button>
+      <div id = "dropdown-content" class="dropdown-content">
+         <button id = "enter-button" class="dropbutton" onclick = "inputplayer()">Enter</button>
+         <input type="text" placeholder="Search or enter playerID" id="myInput" onkeyup="filterFunction()" onkeyup = "animate()">
+         {% for c in dropdownoptions  %}
+         <a href = {{c}}>{{c}}</a>
+         {% endfor %}
+      </div>
+   </div>
+   <!-- stat display boxes -->
+   <div class = "rowdivider"></div>
+   <div class="row">
+      <div class="column" style="background-color: {{kdcolor}}">
+         <h3>K/D</h3>
+         <p class = "number">{{kdfront}}</p>
+         <h3>ROLE AVG: {{kdavg}} </h3>
+      </div>
+      <div class="columndivider"></div>
+      <div class="column" style="background-color: {{gpmcolor}}">
+         <h3>GPM</h3>
+         <p class = "number">{{gpmfront}}</p>
+         <h3>ROLE AVG: {{gpmavg}} </h3>
+      </div>
+      <div class="columndivider"></div>
+      <div class="column" style="background-color: {{xpmcolor}} ">
+         <h3>XPM</h3>
+         <p class = "number">{{xpmfront}}</p>
+         <h3>ROLE AVG: {{xpmavg}} </h3>
+      </div>
+   </div>
+   <div class = "rowdivider"></div>
+   <div class="row">
+      <div class="column" style="background-color: {{hdcolor}}">
+         <h3>HERO DAMAGE</h3>
+         <p class = "number">{{ herodamagefront }}</p>
+         <h3>ROLE AVG: {{hdavg}} </h3>
+      </div>
+      <div class="columndivider"></div>
+      <div class="column" style="background-color: {{tdcolor}}">
+         <h3>TOWER DAMAGE</h3>
+         <p class = "number">{{ towerdamagefront }}</p>
+         <h3>ROLE AVG: {{tdavg}} </h3>
+      </div>
+      <div class="columndivider"></div>
+      <div class="column" style="background-color: {{lhcolor}} ">
+         <h3>LAST HITS</h3>
+         <p class = "number">{{lasthitsfront}}</p>
+         <h3>ROLE AVG: {{lhavg}} </h3>
+      </div>
+   </div>
+   </div>
+   <div class = "rowdivider"></div>
+   </body>
+</html>

@@ -1,0 +1,52 @@
+.animationtext {
+    position: absolute;
+    margin-left: 15px;
+}
+
+.scroller {
+    height: 1.2em;
+    line-height: 1.2em;
+    position: relative;
+    overflow: hidden;
+    max-width: 100vw;
+    
+  }
+  .scroller > .animationtext {
+    position: absolute;
+    top: 0;
+    animation: slide 30s infinite;
+    font-weight: bold;
+    
+  }
+  @keyframes slide {
+    0%, 5% {
+      top: 0;
+    }
+    10%, 15% {
+      top: -1.2em;
+    }
+    20%, 25% {
+      top: -2.4em;
+    }
+    30%, 35% {
+      top: -3.6em;
+    }
+    40%, 45% {
+      top: -4.8em;
+      }
+    50%, 55% {
+      top: -6.0em;
+    }
+    60%, 65% {
+      top: -7.2em;
+    }
+    70%, 75% {
+      top: -8.4em;
+    }
+    80%, 85% {
+      top: -9.6em;
+    }
+    90%, 95% {
+      top: -10.8em;
+    }
+  }

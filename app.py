@@ -37,7 +37,7 @@ def getplayerstats(player):
 
     account_id = 0
     if player.lower() not in idlist and player.isnumeric() == False:
-        return render_template("invalidplayer.html", playername = player)
+        return render_template("invalidplayer.html", error_message = "{} not found, player must be in dropdown list or be a account ID".format(player))
     if player.lower() in idlist:
         account_id = idlist[player.lower()]
     if player.lower() in pos1: #determine player role to compare to avgs
@@ -62,6 +62,9 @@ def getplayerstats(player):
     winratedata = json.loads(winratecall.text)
     statscall = requests.get("https://api.opendota.com/api/players/" + str(account_id) + "/recentMatches")
     statsdata  = json.loads(statscall.text)
+
+    if statsdata == []:
+        return render_template("invalidplayer.html", playername = player, error_message = "Account ID not found. Expose match data must be enabled")
 
 
     # stats to be displayed on HTML

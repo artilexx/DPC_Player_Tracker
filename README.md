@@ -1,3 +1,3 @@
 https://dpcplayertracker.azurewebsites.net/
 
-All stats from Opendota API
+Full stack webapp, all stats from Opendota API

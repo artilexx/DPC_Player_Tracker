@@ -1,6 +1,6 @@
 import requests
 import json
-from avgs.proIDs import pos1, pos2, pos3, pos4, pos5
+from proIDs import pos1, pos2, pos3, pos4, pos5
 import time
 
 def createavgs(account_id, filename):

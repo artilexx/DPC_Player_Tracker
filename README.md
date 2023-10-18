@@ -1,4 +1,4 @@
-https://dpcplayertracker.azurewebsites.net/
+https://dpcplayertracker.azurewebsites.net/ INACTIVE AS I'VE RAN OUT OF AZURE CREDIT :(
 
 Full stack webapp, all stats from Opendota API
 
